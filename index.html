@@ -158,6 +158,16 @@
     .contact{border:1px solid rgba(255,255,255,.16); border-radius:38px; padding:30px; background:linear-gradient(135deg, rgba(247,198,95,.16), rgba(255,78,205,.09), rgba(55,215,255,.08)); box-shadow:var(--shadow)}
     form{display:grid; gap:12px} input, textarea, select{width:100%; border:1px solid var(--line); border-radius:18px; padding:15px 16px; background:rgba(7,7,11,.64); color:var(--text); font:inherit; outline:none} textarea{min-height:130px; resize:vertical} input:focus, textarea:focus, select:focus{border-color:rgba(247,198,95,.65); box-shadow:0 0 0 4px rgba(247,198,95,.12)}
     .contact-grid{display:grid; grid-template-columns:.86fr 1.14fr; gap:20px; align-items:start}.contact-list{display:grid; gap:12px; margin-top:24px}.contact-item{display:flex; gap:12px; align-items:center; padding:14px; border-radius:18px; background:rgba(255,255,255,.055); border:1px solid var(--line)}
+
+    .contact-card{border:1px solid var(--line); border-radius:28px; padding:26px; background:rgba(7,7,11,.58); box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .contact-card h3{font-size:38px; letter-spacing:-.06em; margin:8px 0 10px}
+    .contact-card p{color:var(--muted); line-height:1.6; margin:0 0 18px}
+    .contact-hero-line{display:inline-flex; padding:8px 11px; border-radius:999px; background:rgba(247,198,95,.14); border:1px solid rgba(247,198,95,.35); color:var(--gold); font-weight:950; font-size:13px}
+    .contact-info-grid{display:grid; gap:12px; margin:18px 0}
+    .info-tile{display:flex; align-items:center; gap:13px; padding:14px; border-radius:20px; background:rgba(255,255,255,.06); border:1px solid var(--line); transition:.22s ease}
+    .info-tile:hover{transform:translateY(-2px); background:rgba(255,255,255,.095); border-color:rgba(255,255,255,.23)}
+    .info-tile strong{display:block}.info-tile span:last-child{display:block; color:var(--muted); margin-top:2px; word-break:break-word}
+    .contact-actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
     footer{padding:40px 0 56px; border-top:1px solid var(--line); color:var(--muted)}.footer-grid{display:flex; justify-content:space-between; gap:18px; align-items:center; flex-wrap:wrap}.socials{display:flex; gap:10px; flex-wrap:wrap}.socials a{padding:10px 12px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-weight:800}.socials a:hover{color:var(--text); background:rgba(255,255,255,.07)}
     .reveal{opacity:0; transform:translateY(18px); transition:.7s ease}.reveal.visible{opacity:1; transform:none}
     @media (max-width:960px){.hero-grid,.split,.showcase,.contact-grid{grid-template-columns:1fr}.hero-card{min-height:520px}.grid-3,.price-grid{grid-template-columns:1fr}.price.featured{transform:none}.brand-lane{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.nav-links{display:none}.mobile-toggle{display:block}.nav-links.open{display:flex; position:absolute; left:18px; right:18px; top:82px; flex-direction:column; align-items:stretch; padding:12px; background:rgba(10,10,16,.96); border:1px solid var(--line); border-radius:22px}.nav-links.open a{padding:14px}.nav-cta .btn{display:none}}
@@ -370,27 +380,40 @@
           <div>
             <div class="kicker">Contact</div>
             <h2>Klaar om te ryzen?</h2>
-            <p class="lead">Stuur een bericht over sneaker detailing, een website of clothing samenwerkingen. Het formulier opent je mail-app met alle info ingevuld.</p>
+            <p class="lead">Voor sneaker detailing, websites bouwen, Rexryze Clothing of een samenwerking kun je direct contact opnemen met Noah van Leunen.</p>
             <div class="contact-list">
-              <a class="contact-item" href="mailto:info@rexryze.com"><span class="icon">✉️</span><div><strong>info@rexryze.com</strong><br><span style="color:var(--muted)">Mail direct</span></div></a>
-              <a class="contact-item" href="https://sneakdetailer.nl" target="_blank" rel="noreferrer"><span class="icon">👟</span><div><strong>sneakdetailer.nl</strong><br><span style="color:var(--muted)">Sneaker detailing</span></div></a>
-              <div class="contact-item"><span class="icon">📍</span><div><strong>Nederland</strong><br><span style="color:var(--muted)">Online & op afspraak</span></div></div>
+              <a class="contact-item" href="/cdn-cgi/l/email-protection#fe90919f96929b8b909b90889f90be99939f9792d09d9193"><span class="icon">✉️</span><div><strong><span class="__cf_email__" data-cfemail="4a24252b22262f3f242f243c2b240a2d272b232664292527">[email&#160;protected]</span></strong><br><span style="color:var(--muted)">Mail Noah direct</span></div></a>
+              <a class="contact-item" href="https://sneakdetailer.com" target="_blank" rel="noreferrer"><span class="icon">👟</span><div><strong>sneakdetailer.com</strong><br><span style="color:var(--muted)">Sneaker detailing</span></div></a>
+              <a class="contact-item" href="tel:+31682377334"><span class="icon">📞</span><div><strong>0682377334</strong><br><span style="color:var(--muted)">Bel of app direct</span></div></a>
             </div>
           </div>
-          <form id="contactForm">
-            <input name="naam" placeholder="Je naam" autocomplete="name" required>
-            <input name="email" type="email" placeholder="Je e-mail" autocomplete="email" required>
-            <select name="onderwerp" required>
-              <option value="">Waar gaat het over?</option>
-              <option>Sneaker detailing</option>
-              <option>Website laten bouwen</option>
-              <option>Rexryze Clothing</option>
-              <option>Samenwerking / anders</option>
-            </select>
-            <textarea name="bericht" placeholder="Vertel kort wat je nodig hebt..." required></textarea>
-            <button class="btn primary" type="submit">Verstuur aanvraag</button>
-            <p id="formNote" style="color:var(--muted);margin:0;font-size:13px">Geen backend nodig: dit formulier maakt automatisch een e-mail aan.</p>
-          </form>
+          <div class="contact-card">
+            <div class="contact-hero-line">Neem direct contact op</div>
+            <h3>Noah van Leunen</h3>
+            <p>Voor sneaker detailing, websites, Rexryze Clothing of samenwerkingen kun je mij direct bereiken via de gegevens hieronder.</p>
+            <div class="contact-info-grid">
+              <a class="info-tile" href="/cdn-cgi/l/email-protection#f59b9a949d9990809b909b83949bb59298949c99db969a98">
+                <span class="icon">✉️</span>
+                <div><strong>E-mail</strong><span><span class="__cf_email__" data-cfemail="5a34353b32363f2f343f342c3b341a3d373b333674393537">[email&#160;protected]</span></span></div>
+              </a>
+              <a class="info-tile" href="tel:+31682377334">
+                <span class="icon">📞</span>
+                <div><strong>Telefoon</strong><span>0682377334</span></div>
+              </a>
+              <a class="info-tile" href="https://rexryze.com" target="_blank" rel="noreferrer">
+                <span class="icon">👑</span>
+                <div><strong>Website</strong><span>rexryze.com</span></div>
+              </a>
+              <a class="info-tile" href="https://sneakdetailer.com" target="_blank" rel="noreferrer">
+                <span class="icon">👟</span>
+                <div><strong>Sneaker detailing</strong><span>sneakdetailer.com</span></div>
+              </a>
+            </div>
+            <div class="contact-actions">
+              <a class="btn primary" href="/cdn-cgi/l/email-protection#b2dcddd3daded7c7dcd7dcc4d3dcf2d5dfd3dbde9cd1dddf">Mail Noah</a>
+              <a class="btn" href="tel:+31682377334">Bel direct</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -404,7 +427,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     menuBtn?.addEventListener('click', () => navLinks.classList.toggle('open'));
@@ -418,19 +441,6 @@
     }, {threshold:.12});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const data = new FormData(this);
-      const subject = encodeURIComponent('Nieuwe aanvraag via Rexryze.com - ' + data.get('onderwerp'));
-      const body = encodeURIComponent(
-        'Naam: ' + data.get('naam') + '\n' +
-        'E-mail: ' + data.get('email') + '\n' +
-        'Onderwerp: ' + data.get('onderwerp') + '\n\n' +
-        'Bericht:\n' + data.get('bericht')
-      );
-      window.location.href = 'mailto:info@rexryze.com?subject=' + subject + '&body=' + body;
-      document.getElementById('formNote').textContent = 'Je mail-app wordt geopend. Controleer het bericht en verstuur hem.';
-    });
   </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a13846a2c862d5a7',t:'MTc4Mjc3MTE3OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
